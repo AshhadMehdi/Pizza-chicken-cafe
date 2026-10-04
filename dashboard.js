@@ -1,1 +1,0 @@
-const links=document.querySelectorAll('.sidebar nav a');links.forEach(link=>link.addEventListener('click',()=>{links.forEach(item=>item.classList.remove('active'));link.classList.add('active')}));document.querySelector('.mobile-menu').addEventListener('click',()=>document.querySelector('.sidebar').style.transform='translateX(0)');
