@@ -1,5 +1,6 @@
 const accounts={
- 'admin@pizzahut.pk':{password:'admin123',name:'Ahmed Khan',role:'Owner',initials:'AK'},
+ 'admin@pizzahut.pk':{password:'admin123',name:'Ahmed Khan',role:'Admin',initials:'AK'},
+ 'admin@pizzachickenhut.pk':{password:'admin123',name:'Ahmed Khan',role:'Admin',initials:'AK'},
  'manager@pizzahut.pk':{password:'manager123',name:'Saad Iqbal',role:'Manager',initials:'SI'},
  'manager@pizzachickenhut.pk':{password:'manager123',name:'Saad Iqbal',role:'Manager',initials:'SI'},
  'cashier@pizzahut.pk':{password:'cashier123',name:'Hina Noor',role:'Cashier',initials:'HN'},
