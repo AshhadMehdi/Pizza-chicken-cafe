@@ -1,1 +1,9 @@
-const links=document.querySelectorAll('.sidebar nav a');links.forEach(link=>link.addEventListener('click',()=>{links.forEach(item=>item.classList.remove('active'));link.classList.add('active')}));document.querySelector('.mobile-menu').addEventListener('click',()=>document.querySelector('.sidebar').style.transform='translateX(0)');
+const navItems=[...document.querySelectorAll('.sidebar nav [data-view]')];const views=[...document.querySelectorAll('.module-view')];const toast=document.querySelector('#toast');let toastTimer;
+function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}
+function setView(name){document.querySelector('.main').classList.toggle('module-active',name!=='overview');navItems.forEach(item=>item.classList.toggle('active',item.dataset.view===name));views.forEach(view=>view.classList.toggle('active',view.dataset.view===name));if(name!=='overview')document.querySelector('.module-views').scrollIntoView({behavior:'smooth',block:'start'});}
+navItems.forEach(item=>item.addEventListener('click',event=>{event.preventDefault();setView(item.dataset.view)}));
+document.querySelectorAll('[data-toast]').forEach(button=>button.addEventListener('click',()=>showToast(button.dataset.toast)));
+const search=document.querySelector('.table-search');if(search){search.addEventListener('input',()=>{const query=search.value.toLowerCase();document.querySelectorAll('[data-view="orders"] .table-row:not(.table-head)').forEach(row=>row.style.display=row.textContent.toLowerCase().includes(query)?'grid':'none')})}
+document.querySelector('.mobile-menu')?.addEventListener('click',()=>{const sidebar=document.querySelector('.sidebar');sidebar.classList.toggle('mobile-open')});
+document.querySelector('.profile')?.addEventListener('click',()=>showToast('Admin profile menu opened'));document.querySelector('.notification')?.addEventListener('click',()=>showToast('You have 8 new order notifications'));document.querySelector('.icon-btn')?.addEventListener('click',()=>showToast('Global search is ready'));
+setView('overview');
