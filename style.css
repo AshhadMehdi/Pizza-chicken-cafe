@@ -8,3 +8,4 @@
 .floating-card i{font-style:normal;font-size:11px;letter-spacing:1px;color:var(--red);font-weight:800}.info-icon{font-size:10px!important;font-weight:800;letter-spacing:1px;color:var(--red)}
 .hero-photo{transform:none;border-radius:18px 18px 18px 72px;box-shadow:18px 22px 0 var(--brown),0 25px 40px #6d35144c}.hero-photo img{object-fit:cover;object-position:center center}
 .menu-card{border-radius:10px;box-shadow:none}.menu-card:hover{box-shadow:0 10px 25px #6d351414}.add-btn{font-size:18px;font-weight:400}
+.cart-empty-mark{display:inline-grid!important;place-items:center;width:54px;height:54px;border:1px solid var(--line);border-radius:50%;font-size:30px!important;color:var(--red)}
