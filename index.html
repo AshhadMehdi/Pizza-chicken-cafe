@@ -1,55 +1,11 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#3a1d16" />
-  <title>Pizza Chicken Hut Cafe — Taste of Cheez</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#top" aria-label="Pizza Chicken Hut Cafe home">
-<span class="brand-mark">PH</span>
-        <span><strong>Pizza Chicken Hut</strong><small>Cafe</small></span>
-      </a>
-      <nav class="desktop-nav"><a href="#menu">Menu</a><a href="#deals">Deals</a><a href="#about">About</a></nav>
-      <button class="cart-button" id="openCart"><span>Cart</span><b>Cart</b><em id="cartCount">0</em></button>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">FRESH • HOT • DELIVERED</div>
-        <h1>Taste of <span>Cheez</span></h1>
-        <p>Big flavours, loaded pizzas and crispy chicken — made fresh in Abbottabad.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#menu">Order now <span>→</span></a><a class="text-link" href="tel:0992413127">Call to order</a></div>
-        <div class="trust-row"><span>★ 4.8 local favourite</span><span>● Free delivery on orders Rs. 1,000+</span></div>
-      </div>
-      <div class="hero-art"><div class="hero-photo"><img src="hero-food.png" alt="Fresh cheesy pizza with fries" /></div><div class="photo-badge"><strong>100%</strong><span>freshly made</span></div><div class="floating-card card-one"><i>01</i><span>Fresh from<br><b>the oven</b></span></div><div class="floating-card card-two"><i>02</i><span>Fast home<br><b>delivery</b></span></div></div>
-    </section>
-
-    <section class="deal-strip" id="deals"><div><span class="deal-kicker">TODAY'S SPECIAL</span><h2>Deals made for sharing</h2><p>Save more when you order your favourites together.</p></div><button class="btn btn-dark" data-scroll="#menu">View all deals →</button></section>
-
-    <section class="section" id="menu">
-      <div class="section-heading"><div><span class="eyebrow">OUR MENU</span><h2>What are you craving?</h2></div><div class="menu-tools"><label class="search-box"><span>⌕</span><input id="menuSearch" type="search" placeholder="Search the menu" aria-label="Search the menu"></label><span class="small-note">All prices in PKR</span></div></div>
-      <div class="category-tabs" id="categoryTabs"><button class="active" data-category="all">All items</button><button data-category="deals">Wow deals</button><button data-category="pizza">Pizza</button><button data-category="chicken">Chicken</button><button data-category="burgers">Burgers</button><button data-category="drinks">Drinks</button></div>
-      <div class="menu-grid" id="menuGrid"></div>
-    </section>
-
-    <section class="info-section" id="about"><div class="info-card"><span class="info-icon">01</span><div><h3>Find us</h3><p>Mandian, opposite Shimla Hotel,<br>Jinnah Road, Abbottabad</p></div></div><div class="info-card"><span class="info-icon">02</span><div><h3>Open daily</h3><p>12:00 PM — 11:30 PM<br><b>Free delivery · Min. order Rs. 1,000</b></p></div></div><div class="info-card"><span class="info-icon">03</span><div><h3>Order by phone</h3><p>0992-413127 · 0333-8047809<br>0320-5050359 · 0314-2562463</p></div></div></section>
-  </main>
-
-  <footer><div class="brand footer-brand"><span class="brand-mark">🍕</span><span><strong>Pizza Chicken Hut</strong><small>Cafe</small></span></div><p>Made with love in Abbottabad · © 2026</p><div class="social">f&nbsp;&nbsp; ◎ &nbsp; WhatsApp</div></footer>
-
-  <div class="cart-overlay" id="cartOverlay"></div><aside class="cart-drawer" id="cartDrawer"><div class="drawer-header"><div><span class="eyebrow">YOUR ORDER</span><h2>Cart <span id="drawerCount">(0)</span></h2></div><button class="close-btn" id="closeCart">×</button></div><div class="cart-items" id="cartItems"><div class="empty-cart"><span>🛒</span><h3>Your cart is empty</h3><p>Add something delicious to get started.</p></div></div><div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">Rs. 0</strong></div><p class="delivery-note">Free delivery applies to orders of Rs. 1,000 or more.</p><button class="btn btn-primary full" id="checkoutBtn" disabled>Continue to checkout <span>→</span></button></div></aside>
-  <div class="modal-backdrop" id="modalBackdrop"><div class="checkout-modal"><button class="close-btn" id="closeModal">×</button><span class="eyebrow">ALMOST THERE</span><h2>Where should we deliver?</h2><p class="modal-sub">This demo sends the order details to the cafe team.</p><form id="checkoutForm"><label>Your name<input required name="name" placeholder="e.g. Ahmed Khan"></label><label>Phone number<input required name="phone" placeholder="03xx-xxxxxxx"></label><label>Delivery address<textarea required name="address" rows="2" placeholder="House, street, area, Abbottabad"></textarea></label><label>Payment method<select name="payment"><option>Cash on delivery</option><option>JazzCash / Easypaisa</option></select></label><button class="btn btn-primary full" type="submit">Place demo order <span>→</span></button></form></div></div>
-  <div class="mobile-nav"><button data-scroll="#top">⌂<span>Home</span></button><button data-scroll="#menu">☰<span>Menu</span></button><button id="mobileCart">Cart<span>Cart <b id="mobileCartCount">0</b></span></button><a href="tel:0992413127">Call<span>Call</span></a></div><div class="toast" id="toast"></div>
-  <script src="app.js"></script>
-</body>
-</html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pizza Chicken Hut — Operations</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="dashboard.css"></head>
+<body><div class="app-shell">
+<aside class="sidebar"><div class="dash-brand"><span>PH</span><div><b>Pizza Chicken Hut</b><small>Operations</small></div></div><div class="branch"><small>ACTIVE LOCATION</small><strong>Mandian · Abbottabad</strong><i>● Open</i></div><nav><p>WORKSPACE</p><a class="active" href="#overview"><span>▦</span>Overview</a><a href="#orders"><span>≡</span>Orders <em>8</em></a><a href="#menu"><span>◫</span>Menu & deals</a><a href="#inventory"><span>◒</span>Inventory</a><p>BUSINESS</p><a href="#customers"><span>◎</span>Customers</a><a href="#reports"><span>⌁</span>Reports</a><a href="#settings"><span>⚙</span>Settings</a></nav><div class="sidebar-bottom"><div class="user-avatar">AK</div><div><b>Admin account</b><small>Owner access</small></div><button>···</button></div></aside>
+<main class="main"><header class="dash-header"><div><button class="mobile-menu">☰</button><span class="date-label">SATURDAY, 04 OCTOBER 2026</span><h1>Good evening, Admin <span>✦</span></h1><p>Here is what is happening at the cafe today.</p></div><div class="header-actions"><button class="icon-btn">⌕</button><button class="icon-btn notification">♢<i></i></button><button class="profile">AK <span>⌄</span></button></div></header>
+<section class="metric-grid" id="overview"><article class="metric primary"><div class="metric-top"><span>Today's revenue</span><b>↗ 12.8%</b></div><strong>Rs. 48,650</strong><small>Compared with Rs. 43,120 last Saturday</small><div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article><article class="metric"><div class="metric-top"><span>Orders today</span><b class="green">↗ 8.4%</b></div><strong>86</strong><small>12 orders currently in progress</small><div class="metric-icon red">≡</div></article><article class="metric"><div class="metric-top"><span>Average order</span><b class="green">↗ 4.1%</b></div><strong>Rs. 566</strong><small>Best: Family Feast · Rs. 1,750</small><div class="metric-icon yellow">↗</div></article><article class="metric"><div class="metric-top"><span>Low stock items</span><b class="warning">Needs attention</b></div><strong>05</strong><small>Ingredients running below minimum</small><div class="metric-icon brown">!</div></article></section>
+<section class="dashboard-grid"><article class="panel sales-panel"><div class="panel-heading"><div><span class="section-label">PERFORMANCE</span><h2>Revenue overview</h2></div><select><option>Last 7 days</option><option>Last 30 days</option></select></div><div class="chart"><div class="y-axis"><span>60k</span><span>40k</span><span>20k</span><span>0</span></div><div class="chart-area"><div class="gridline"></div><div class="gridline"></div><div class="gridline"></div><div class="gridline"></div><div class="bars"><div><i style="height:44%"></i><small>Mon</small></div><div><i style="height:62%"></i><small>Tue</small></div><div><i style="height:53%"></i><small>Wed</small></div><div><i style="height:71%"></i><small>Thu</small></div><div><i style="height:58%"></i><small>Fri</small></div><div><i class="today" style="height:87%"></i><small>Sat</small></div><div><i style="height:20%"></i><small>Sun</small></div></div></div></div><div class="chart-legend"><span><i class="legend-dot"></i>Revenue</span><b>Rs. 48,650 <small>today</small></b></div></article>
+<article class="panel orders-panel" id="orders"><div class="panel-heading"><div><span class="section-label">LIVE QUEUE</span><h2>Recent orders <em>8 new</em></h2></div><a href="#orders">View all →</a></div><div class="order-list"><div class="order-row"><div class="order-id"><b>#1048</b><small>2 min ago · Delivery</small></div><div class="order-customer"><b>Hassan Ali</b><small>2 items · 1,750</small></div><span class="status preparing">Preparing</span><button>···</button></div><div class="order-row"><div class="order-id"><b>#1047</b><small>8 min ago · Pickup</small></div><div class="order-customer"><b>Maryam K.</b><small>4 items · 2,380</small></div><span class="status ready">Ready</span><button>···</button></div><div class="order-row"><div class="order-id"><b>#1046</b><small>12 min ago · Delivery</small></div><div class="order-customer"><b>Bilal Ahmed</b><small>3 items · 1,080</small></div><span class="status new">New</span><button>···</button></div><div class="order-row"><div class="order-id"><b>#1045</b><small>18 min ago · Pickup</small></div><div class="order-customer"><b>Fatima Noor</b><small>1 item · 650</small></div><span class="status completed">Completed</span><button>···</button></div></div></article>
+<article class="panel popular-panel" id="menu"><div class="panel-heading"><div><span class="section-label">MENU INSIGHT</span><h2>Popular items</h2></div><a href="#menu">Manage menu →</a></div><div class="popular-list"><div class="popular-item"><span class="rank">01</span><div class="mini-food pizza">PZ</div><div><b>Family Feast</b><small>42 sold this week</small></div><strong>Rs. 73,500</strong></div><div class="popular-item"><span class="rank">02</span><div class="mini-food burger">BG</div><div><b>Zinger Party</b><small>31 sold this week</small></div><strong>Rs. 54,250</strong></div><div class="popular-item"><span class="rank">03</span><div class="mini-food chicken">CH</div><div><b>Pizza & Chicken</b><small>24 sold this week</small></div><strong>Rs. 67,200</strong></div></div></article>
+<article class="panel stock-panel" id="inventory"><div class="panel-heading"><div><span class="section-label">INVENTORY</span><h2>Stock attention</h2></div><a href="#inventory">View inventory →</a></div><div class="stock-list"><div><div><b>Chicken fillet</b><small>Only 4.5 kg left</small></div><span><i style="width:22%"></i></span><strong>22%</strong></div><div><div><b>Mozzarella cheese</b><small>Only 6 kg left</small></div><span><i style="width:35%"></i></span><strong>35%</strong></div><div><div><b>Pizza flour</b><small>18 kg remaining</small></div><span><i class="safe" style="width:68%"></i></span><strong>68%</strong></div><div><div><b>500ml cold drinks</b><small>24 bottles left</small></div><span><i style="width:29%"></i></span><strong>29%</strong></div></div><button class="outline-btn">+ Create purchase order</button></article></section>
+</main></div><script src="dashboard.js"></script></body></html>
