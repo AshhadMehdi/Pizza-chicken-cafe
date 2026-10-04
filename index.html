@@ -37,7 +37,7 @@
     <section class="deal-strip" id="deals"><div><span class="deal-kicker">TODAY'S SPECIAL</span><h2>Deals made for sharing</h2><p>Save more when you order your favourites together.</p></div><button class="btn btn-dark" data-scroll="#menu">View all deals →</button></section>
 
     <section class="section" id="menu">
-      <div class="section-heading"><div><span class="eyebrow">OUR MENU</span><h2>What are you craving?</h2></div><span class="small-note">All prices in PKR</span></div>
+      <div class="section-heading"><div><span class="eyebrow">OUR MENU</span><h2>What are you craving?</h2></div><div class="menu-tools"><label class="search-box"><span>⌕</span><input id="menuSearch" type="search" placeholder="Search the menu" aria-label="Search the menu"></label><span class="small-note">All prices in PKR</span></div></div>
       <div class="category-tabs" id="categoryTabs"><button class="active" data-category="all">All items</button><button data-category="deals">Wow deals</button><button data-category="pizza">🍕 Pizza</button><button data-category="chicken">🍗 Chicken</button><button data-category="burgers">🍔 Burgers</button><button data-category="drinks">🥤 Drinks</button></div>
       <div class="menu-grid" id="menuGrid"></div>
     </section>
@@ -49,7 +49,7 @@
 
   <div class="cart-overlay" id="cartOverlay"></div><aside class="cart-drawer" id="cartDrawer"><div class="drawer-header"><div><span class="eyebrow">YOUR ORDER</span><h2>Cart <span id="drawerCount">(0)</span></h2></div><button class="close-btn" id="closeCart">×</button></div><div class="cart-items" id="cartItems"><div class="empty-cart"><span>🛒</span><h3>Your cart is empty</h3><p>Add something delicious to get started.</p></div></div><div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">Rs. 0</strong></div><p class="delivery-note">Free delivery applies to orders of Rs. 1,000 or more.</p><button class="btn btn-primary full" id="checkoutBtn" disabled>Continue to checkout <span>→</span></button></div></aside>
   <div class="modal-backdrop" id="modalBackdrop"><div class="checkout-modal"><button class="close-btn" id="closeModal">×</button><span class="eyebrow">ALMOST THERE</span><h2>Where should we deliver?</h2><p class="modal-sub">This demo sends the order details to the cafe team.</p><form id="checkoutForm"><label>Your name<input required name="name" placeholder="e.g. Ahmed Khan"></label><label>Phone number<input required name="phone" placeholder="03xx-xxxxxxx"></label><label>Delivery address<textarea required name="address" rows="2" placeholder="House, street, area, Abbottabad"></textarea></label><label>Payment method<select name="payment"><option>Cash on delivery</option><option>JazzCash / Easypaisa</option></select></label><button class="btn btn-primary full" type="submit">Place demo order <span>→</span></button></form></div></div>
-  <div class="toast" id="toast"></div>
+  <div class="mobile-nav"><button data-scroll="#top">⌂<span>Home</span></button><button data-scroll="#menu">☰<span>Menu</span></button><button id="mobileCart">🛒<span>Cart <b id="mobileCartCount">0</b></span></button><a href="tel:0992413127">☎<span>Call</span></a></div><div class="toast" id="toast"></div>
   <script src="app.js"></script>
 </body>
 </html>
